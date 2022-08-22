@@ -1,7 +1,7 @@
 :root {
   /* Fonts */
-  --monospace-font: 'Jetbrains Mono', 'SF Mono', monospace;
-  --text-font: 'Montserrat', sans-serif;
+  --monospace-font: "Jetbrains Mono", "SF Mono", monospace;
+  --text-font: "Montserrat", sans-serif;
 
   /* Text */
   --text-font-size: 1rem;
@@ -158,11 +158,9 @@ body {
 }
 
 .hugo-content ul > li::before {
-  content: '—';
+  content: "—";
   position: absolute;
-  top: 50%;
   left: -24px;
-  transform: translateY(-50%);
 }
 
 .hugo-content ul,
@@ -175,6 +173,11 @@ body {
 }
 
 .hugo-content li:not(:first-child) {
+  margin-top: var(--text-top-margin);
+}
+
+.hugo-content li ul,
+.hugo-content li ol {
   margin-top: var(--text-top-margin);
 }
 
@@ -202,6 +205,30 @@ body {
   text-align: center;
   font-family: var(--monospace-font);
   color: #4a4a4a;
+}
+
+.hugo-content table {
+  font-size: 12px;
+  width: 100%;
+  line-height: var(--text-lineheight);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 24px 0;
+  background: #FAFAFA;
+}
+
+.hugo-content tbody td {
+  border-top: 1px solid black;
+}
+
+.hugo-content th, .hugo-content td {
+  width: 100%;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+.hugo-content img {
+  border-radius: 3px;
 }
 
 @media screen and (max-width: 1024px) {

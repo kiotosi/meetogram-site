@@ -1,0 +1,99 @@
+:root {
+  --size-sm: 200px;
+  --size-md: 400px;
+  --size-lg: 800px;
+}
+
+/* Sizes */
+.size-small {
+  width: var(--size-sm);
+  height: var(--size-sm);
+}
+
+.size-medium {
+  width: var(--size-md);
+  height: var(--size-md);
+}
+
+.size-large {
+  width: var(--size-lg);
+  height: var(--size-lg);
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --size-sm: 100px;
+    --size-md: 200px;
+    --size-lg: 400px;
+  }
+}
+
+/* Float images */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .float-left, .float-right {
+    float: initial;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Default margins */
+.mt {
+  margin-top: 1rem;
+}
+
+.mr {
+  margin-right: 1rem;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.ml {
+  margin-left: 1rem;
+}
+
+.mt + p {
+  margin-top: calc(1rem - 4px);
+}
+
+/* Stack elements */
+.stack {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.stack__item img {
+  margin: 12px 4px;
+  width: 50px;
+  height: 50px;
+}
+
+/* Social link elements */
+.social-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social-link:not(:first-child) {
+  margin-top: 10px;
+}
+
+.social-link__img {
+  filter: saturate(0);
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: .7rem;
+}
