@@ -1,0 +1,26 @@
+{{ define "style" }}
+<link rel="stylesheet" href="/css/list.css" />
+{{ end }} {{ define "main" }}
+<div class="list">
+  {{ partial "header.html" . }}
+
+  <div id="sidebar" class="sidebar">
+    <ul class="sidebar__list">
+      {{ range .Pages }}
+      <li class="sidebar__element">
+        <a class="link" href="{{.Permalink }}">{{.Title}}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="container container_list">
+    <h1 class="name">{{ .Params.Title }}</h1>
+    <main class="single__hugo-content hugo-content">{{ .Content }}</main>
+  </div>
+  <div id="navigation-button" class="navigation-button">
+    <span class="navigation-button__inner"></span>
+  </div>
+</div>
+<script src="/js/navigation.js"></script>
+{{ end }}

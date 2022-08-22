@@ -1,0 +1,9 @@
+baseURL: /
+languageCode: ru-ru
+title: meetogram
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: solarized-dark

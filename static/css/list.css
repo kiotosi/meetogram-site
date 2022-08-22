@@ -1,0 +1,128 @@
+:root {
+  --sidebar-size: 380px;
+  --navigation-button-size: 128px;
+}
+.container_list {
+  margin: 0;
+  padding: 130px 104px 32px calc(var(--sidebar-size) + 104px);
+}
+
+.list {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.list .header {
+  left: var(--sidebar-size);
+  width: calc(100% - var(--sidebar-size));
+}
+
+.sidebar {
+  transition: all .33s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0;
+  width: var(--sidebar-size);
+  background-color: #f8f8f8;
+}
+
+.sidebar__list {
+  list-style: none;
+  padding-left: 32px;
+}
+
+.sidebar__element::before {
+  content: '-';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -16px;
+}
+
+.sidebar__element {
+  position: relative;
+  margin-top: 12px;
+}
+
+/* Navigation button */
+.navigation-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(var(--navigation-button-size) / -2);
+  width: var(--navigation-button-size);
+  height: var(--navigation-button-size);
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+}
+
+.navigation-button_active {
+  background: #dfdfdf;
+}
+
+.navigation-button__inner {
+  position: relative;
+}
+
+.navigation-button__inner::before,
+.navigation-button__inner::after {
+  content: '';
+  position: absolute;
+}
+
+.navigation-button__inner,
+.navigation-button__inner::before,
+.navigation-button__inner::after {
+  width: 24px;
+  height: 3px;
+  background: #777777;
+  margin-right: 50px;
+}
+
+.navigation-button__inner::before {
+  bottom: 12px;
+}
+
+.navigation-button__inner::after {
+  top: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --sidebar-size: 0;
+  }
+
+  .navigation-button {
+    display: flex;
+  }
+
+  .sidebar {
+    left: -100%;
+    width: 100vw;
+  }
+
+  .sidebar_active {
+    left: 0;
+  }
+
+  .sidebar__element {
+    font-size: 20px;
+  }
+
+  .header {
+    left: 0;
+    right: 0;
+  }
+
+  .container_list {
+    padding: 130px 24px 32px;
+  }
+}

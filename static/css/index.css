@@ -1,0 +1,91 @@
+.container {
+  padding: 12px 112px;
+}
+
+.container_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Hero Container */
+.hero {
+  display: grid;
+  gap: 32px;
+  grid-template-areas:
+    'architecture about security'
+    'architecture deploy development'
+    'architecture testing testing';
+}
+
+/* Showcases Block */
+.showcase-block {
+  display: block;
+  font-size: 14px;
+  border: 1px solid #3f3f3f;
+  border-radius: 5px;
+  padding: 32px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.showcase-block:hover {
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+.showcase-block__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.showcase-block__description {
+  margin-top: 16px;
+}
+
+/* Showcases Block Grid Templating */
+.showcase-block__architecture {
+  grid-area: architecture;
+}
+
+.showcase-block__about {
+  grid-area: about;
+}
+
+.showcase-block__deploy {
+  grid-area: deploy;
+}
+
+.showcase-block__development {
+  grid-area: development;
+}
+
+.showcase-block__testing {
+  grid-area: testing;
+}
+
+.showcase-block__security {
+  grid-area: security;
+}
+
+.showcase-block__contribute {
+  grid-area: contribute;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    grid-template: initial;
+    grid-column-gap: 0;
+  }
+
+  .container {
+    margin: 0;
+    padding: clamp(12px, 24px, 36px);
+  }
+
+  .showcase-block {
+    grid-area: initial;
+  }
+}

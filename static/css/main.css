@@ -1,0 +1,211 @@
+:root {
+  /* Fonts */
+  --monospace-font: 'Jetbrains Mono', 'SF Mono', monospace;
+  --text-font: 'Montserrat', sans-serif;
+
+  /* Text */
+  --text-font-size: 1rem;
+  --text-color: #2e2e2e;
+  --text-link-color: #6a9068;
+  --text-link-color-hover: #729b70;
+
+  /* Container */
+  --container-default-size: 1696px;
+
+  /* Margin, padding, height */
+  --text-top-margin: 10px;
+  --text-lineheight: 150%;
+}
+
+body {
+  font-family: var(--monospace-font);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: var(--container-default-size);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__navigation {
+  margin: 19px 32px;
+  word-break: keep-all;
+}
+
+.header__arrow {
+  color: #8f8f8f;
+}
+
+.name {
+  font-size: 64px;
+  margin: 0 0 38px;
+}
+
+.link {
+  text-decoration: initial;
+  color: var(--text-link-color);
+}
+
+.link:hover {
+  color: var(--text-link-color-hover);
+}
+
+.hugo-content {
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+/* Контент на Hugo не имеет своих классов, поэтому будем стилизовать через родительский селектор */
+.hugo-content h1,
+.hugo-content h2,
+.hugo-content h3 {
+  font-family: var(--monospace-font);
+  margin-bottom: 0;
+}
+
+.hugo-content h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 36px;
+}
+
+.hugo-content h2 {
+  font-weight: 600;
+  margin-top: 32px;
+  font-size: 32px;
+}
+
+.hugo-content h3 {
+  font-weight: 500;
+  margin-top: 24px;
+  font-size: 24px;
+}
+
+.hugo-content p {
+  margin-top: var(--text-top-margin);
+  margin-bottom: 0;
+  line-height: var(--text-lineheight);
+}
+
+.hugo-content blockquote {
+  margin: 22px 0 0;
+  padding: 8px 36px;
+  border-left: 4px solid black;
+  background: #fafafa;
+}
+
+.hugo-content blockquote p {
+  line-height: 1.6rem;
+  margin: 0;
+}
+
+.hugo-content p code {
+  font-size: 14px;
+  background: #d7d7d7;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.hugo-content .highlight pre {
+  padding: 22px 20px;
+  font-size: var(--monospace-font);
+  border-radius: 10px;
+  margin: 0;
+  margin-top: 22px;
+}
+
+.hugo-content small {
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.hugo-content a {
+  text-decoration: none;
+  color: var(--text-link-color);
+}
+
+.hugo-content a:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: var(--text-link-color-hover);
+}
+
+.hugo-content ul {
+  list-style: none;
+}
+
+.hugo-content ul > li {
+  position: relative;
+}
+
+.hugo-content ul > li::before {
+  content: '—';
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translateY(-50%);
+}
+
+.hugo-content ul,
+.hugo-content ol {
+  margin-bottom: 0;
+}
+
+.hugo-content li {
+  line-height: var(--text-lineheight);
+}
+
+.hugo-content li:not(:first-child) {
+  margin-top: var(--text-top-margin);
+}
+
+.hugo-content details {
+  margin-top: 22px;
+  padding: 16px 12px;
+  border-radius: 5px;
+  background-color: #ededed;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.hugo-content details[open] {
+  padding: 16px 12px 24px;
+}
+
+.hugo-content details > *:not(summary) {
+  margin-left: 36px;
+}
+
+.hugo-content p:has(small) {
+  margin-top: 8px;
+  text-align: center;
+  font-family: var(--monospace-font);
+  color: #4a4a4a;
+}
+
+@media screen and (max-width: 1024px) {
+  .name {
+    font-size: 48px;
+  }
+}
