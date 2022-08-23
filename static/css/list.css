@@ -21,6 +21,7 @@
 .sidebar {
   transition: all .33s ease-in-out;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -62,6 +63,7 @@
   align-items: center;
   display: none;
   cursor: pointer;
+  z-index: 3;
 }
 
 .navigation-button_active {

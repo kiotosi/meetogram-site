@@ -5,6 +5,7 @@
 
   /* Text */
   --text-font-size: 1rem;
+  --text-monospace-font-size: 14px;
   --text-color: #2e2e2e;
   --text-link-color: #6a9068;
   --text-link-color-hover: #729b70;
@@ -38,7 +39,6 @@ body {
   top: 0;
   width: 100%;
   height: 64px;
-  border-bottom: 1px solid black;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -84,18 +84,21 @@ body {
   font-weight: 700;
   font-size: 40px;
   margin-top: 36px;
+  margin-bottom: 18px;
 }
 
 .hugo-content h2 {
   font-weight: 600;
   margin-top: 32px;
   font-size: 32px;
+  margin-bottom: 16px;
 }
 
 .hugo-content h3 {
   font-weight: 500;
   margin-top: 24px;
   font-size: 24px;
+  margin-bottom: 16px;
 }
 
 .hugo-content p {
@@ -116,7 +119,7 @@ body {
   margin: 0;
 }
 
-.hugo-content p code {
+.hugo-content p code, .hugo-content li code {
   font-size: 14px;
   background: #d7d7d7;
   border-radius: 5px;
@@ -126,16 +129,21 @@ body {
 
 .hugo-content .highlight pre {
   padding: 22px 20px;
-  font-size: var(--monospace-font);
+  font-size: var(--text-monospace-font-size);
   border-radius: 10px;
   margin: 0;
   margin-top: 22px;
+  overflow-x: scroll;
 }
 
 .hugo-content small {
   font-size: 12px;
   margin-top: 15px;
   margin-bottom: 0;
+}
+
+.hugo-content p small * {
+  font-size: 12px;
 }
 
 .hugo-content a {
@@ -196,6 +204,10 @@ body {
   padding: 16px 12px 24px;
 }
 
+.hugo-content details[open] summary {
+  margin-bottom: 12px;
+}
+
 .hugo-content details > *:not(summary) {
   margin-left: 36px;
 }
@@ -215,6 +227,8 @@ body {
   border-bottom: 1px solid black;
   margin: 24px 0;
   background: #FAFAFA;
+  overflow-x: scroll;
+  display: block;
 }
 
 .hugo-content tbody td {
@@ -228,6 +242,9 @@ body {
 }
 
 .hugo-content img {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
   border-radius: 3px;
 }
 
