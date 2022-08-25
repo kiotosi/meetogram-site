@@ -1,0 +1,10 @@
+
+{{ if (isset $.Site.Data.stack (.Get "name")) }}
+{{ $name := (.Get "name") }}
+{{ $item := index $.Site.Data.stack $name }}
+<a class="stack__item" href="{{ $item.url }}" target="_blank" rel="noreferrer">
+  <img src="{{ $item.iconUrl }}" alt="{{ $name }}" />
+</a>
+ {{ else }}
+<div>null</div>
+{{ end }}

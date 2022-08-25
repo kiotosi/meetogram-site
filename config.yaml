@@ -6,4 +6,4 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: solarized-dark
+    noClasses: false

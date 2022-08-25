@@ -1,5 +1,6 @@
 ---
 title: Деплой в Heroku
+order: 2
 ---
 
 Для того чтобы задеплоить приложение в Heroku для начала нужно скачать `heroku-cli`. Сделать это можно с [официального сайта](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) или же скачав `heroku-cli` с помощью npm:

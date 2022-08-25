@@ -1,0 +1,12 @@
+{{ $type := .Get "type" }}
+
+
+
+{{ if (isset $.Site.Data.social $type) }}
+{{ $item := index $.Site.Data.social $type }}
+<a href="{{ $item.baseURL }}{{ .Get "nickname" }}" class="social-link__item social-link">
+  <img class="social-link__img" src="{{ $item.iconURL }}" alt="{{ $type }} icon" /><span class="social-link__text">{{ title $type }}</span>
+</a>
+ {{ else }}
+<div>{{ $type }}</div>
+{{ end }}

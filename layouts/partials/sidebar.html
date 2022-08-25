@@ -1,0 +1,15 @@
+<div id="sidebar" class="sidebar">
+  <ul class="sidebar__list">
+    {{ range sort . }}
+    <li class="sidebar__element">
+      <a class="link" href="{{.Permalink }}">
+      {{ if (isset .Params "atype") }}
+        {{.Params.atype }}: {{.Title}}
+      {{ else }}
+        {{.Title}}
+      {{ end }}  
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>

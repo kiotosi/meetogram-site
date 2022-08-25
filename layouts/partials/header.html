@@ -10,5 +10,11 @@
   {{ else if not .p1.IsHome }}
     {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 ) }}
   {{ end }}
-  <a class="link" href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+  <a class="link" href="{{ .p1.Permalink }}">
+    {{ if (isset .p1.Params "atype") }}
+      {{.p1.Params.atype }}: {{.p1.Title}}
+    {{ else }}
+      {{.p1.Title}}
+    {{ end }}  
+  </a>
 {{ end }}

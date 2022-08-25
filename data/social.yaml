@@ -1,0 +1,9 @@
+github:
+  baseURL: https://vk.com/
+  iconURL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg
+vk:
+  baseURL: https://github.com/
+  iconURL: https://www.vectorlogo.zone/logos/vk/vk-tile.svg
+codepen:
+  baseURL: https://codepen.io/
+  iconURL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-plain.svg

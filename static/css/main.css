@@ -75,7 +75,8 @@ body {
 /* Контент на Hugo не имеет своих классов, поэтому будем стилизовать через родительский селектор */
 .hugo-content h1,
 .hugo-content h2,
-.hugo-content h3 {
+.hugo-content h3,
+.hugo-content h4 {
   font-family: var(--monospace-font);
   margin-bottom: 0;
 }
@@ -99,6 +100,13 @@ body {
   margin-top: 24px;
   font-size: 24px;
   margin-bottom: 16px;
+}
+
+.hugo-content h4 {
+  font-weight: 500;
+  margin-top: 18px;
+  font-size: 18px;
+  margin-bottom: 14px;
 }
 
 .hugo-content p {
@@ -133,7 +141,7 @@ body {
   border-radius: 10px;
   margin: 0;
   margin-top: 22px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .hugo-content small {
@@ -220,15 +228,14 @@ body {
 }
 
 .hugo-content table {
-  font-size: 12px;
-  width: 100%;
-  line-height: var(--text-lineheight);
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  margin: 24px 0;
-  background: #FAFAFA;
-  overflow-x: scroll;
   display: block;
+  background: #FAFAFA;
+  overflow-x: auto;
+  width: fit-content;
+  margin: 24px auto;
+  font-size: 12px;
+  line-height: var(--text-lineheight);
+  border: 1px solid black;
 }
 
 .hugo-content tbody td {
@@ -236,7 +243,6 @@ body {
 }
 
 .hugo-content th, .hugo-content td {
-  width: 100%;
   text-align: center;
   padding: 8px 16px;
 }

@@ -3,17 +3,7 @@
 {{ end }} {{ define "main" }}
 <div class="list">
   {{ partial "header.html" . }}
-
-  <div id="sidebar" class="sidebar">
-    <ul class="sidebar__list">
-      {{ range .Pages }}
-      <li class="sidebar__element">
-        <a class="link" href="{{.Permalink }}">{{.Title}}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-
+  {{ partial "sidebar.html" .Pages }}
   <div class="container container_list">
     <h1 class="name">{{ .Params.Title }}</h1>
     <main class="single__hugo-content hugo-content">{{ .Content }}</main>
