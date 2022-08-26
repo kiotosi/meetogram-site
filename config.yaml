@@ -6,4 +6,4 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    noClasses: false
+    theme: monokai
